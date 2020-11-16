@@ -54,7 +54,7 @@
     <scm>
         <connection>scm:git:https://github.com/jcefmaven/jcefbundlemavenplugin</connection>
         <developerConnection>scm:git:https://github.com/jcefmaven/jcefbundlemavenplugin</developerConnection>
-        <tag>HEAD</tag>
+        <tag>{ref}</tag>
         <url>https://github.com/jcefmaven/jcefbundlemavenplugin</url>
     </scm>
 
