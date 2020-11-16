@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>CFBundleDevelopmentRegion</key>
+        <string>English</string>
+        <key>CFBundleExecutable</key>
+        <string>JavaAppLauncher</string>
+        <key>CFBundleIconFile</key>
+        <string>CefIcon.icns</string>
+        <key>CFBundleIdentifier</key>
+        <string>{bundle_identifier}</string>
+        <key>CFBundleDisplayName</key>
+        <string>{bundle_display_name}</string>
+        <key>CFBundleInfoDictionaryVersion</key>
+        <string>6.0</string>
+        <key>CFBundleName</key>
+        <string>{bundle_name}</string>
+        <key>CFBundlePackageType</key>
+        <string>APPL</string>
+        <key>CFBundleShortVersionString</key>
+        <string>{bundle_short_version}</string>
+        <key>CFBundleVersion</key>
+        <string>{bundle_version}</string>
+        <key>CFBundleSignature</key>
+        <string>????</string>
+        <key>NSHumanReadableCopyright</key>
+        <string>{bundle_copyright}</string>
+        <key>LSMinimumSystemVersion</key>
+        <string>10.7</string>
+        <key>NSHighResolutionCapable</key>
+        <true/>
+        <key>NSSupportsAutomaticGraphicsSwitching</key>
+        <true/>
+        <key>JVMMainClassName</key>
+        <string>{main_class}</string>
+        <key>CFBundleDocumentTypes</key>
+        <array>
+        </array>
+        <key>LSArchitecturePriority</key>
+        <array>
+        </array>
+        <key>LSEnvironment</key>
+        <dict>
+            <key>LC_CTYPE</key>
+            <string>UTF-8</string>
+        </dict>
+        <key>JVMOptions</key>
+        <array>
+            <string>-Djava.library.path=$APP_ROOT/Contents/Java/:$APP_ROOT/Contents/Frameworks/Chromium Embedded Framework.framework/Libraries</string>
+{jvm_options}
+        </array>
+        <key>JVMDefaultOptions</key>
+        <dict>
+        </dict>
+        <key>JVMArguments</key>
+        <array>
+{jvm_args}
+        </array>
+    </dict>
+</plist>
+
