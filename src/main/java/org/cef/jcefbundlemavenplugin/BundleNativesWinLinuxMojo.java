@@ -50,5 +50,11 @@ public class BundleNativesWinLinuxMojo extends BundleNativesMojo {
             throw new MojoExecutionException("Failed to create bundle lock file!");
         //Relocate jar and resources
         Relocator.relocate(new File(getProjectBuildDir()), targetDir, relocations);
+        //Run exporter
+        if(getNativeType()==NativeType.LINUX32 || getNativeType()==NativeType.LINUX64){
+            getExporter().export(targetDir, p->p.endsWith("jcef_helper"));
+        }else{
+            getExporter().export(targetDir, p->false);
+        }
     }
 }

@@ -17,6 +17,8 @@ import org.apache.maven.shared.transfer.artifact.DefaultArtifactCoordinate;
 import org.apache.maven.shared.transfer.artifact.resolve.ArtifactResolver;
 import org.apache.maven.shared.transfer.artifact.resolve.ArtifactResolverException;
 import org.apache.maven.shared.transfer.artifact.resolve.ArtifactResult;
+import org.cef.jcefbundlemavenplugin.exporter.ExportType;
+import org.cef.jcefbundlemavenplugin.exporter.Exporter;
 
 import java.io.File;
 import java.io.IOException;
@@ -43,6 +45,15 @@ public abstract class BundleNativesMojo extends AbstractMojo {
     private DependencyGraphBuilder dependencyGraphBuilder;
     @Parameter(defaultValue = "${project.build.directory}", readonly = true, required = true)
     private String projectBuildDir;
+
+    /**
+     * The export type to use. You can either export your project as "plain" (simple directory structure),
+     * "zip" or "targz". We recommend using zip for Windows (users can extract it easier) and tar.gz for MacOSX,
+     * as files within the bundle require to be marked as executable. The Linux version marks files as executable
+     * automatically, so the type is not important.
+     */
+    @Parameter(defaultValue = "plain")
+    private String exportType;
 
     public BundleNativesMojo(NativeType nativeType) {
         this.nativeType = nativeType;
@@ -163,5 +174,9 @@ public abstract class BundleNativesMojo extends AbstractMojo {
 
     public String getProjectBuildDir() {
         return projectBuildDir;
+    }
+
+    public Exporter getExporter() throws MojoFailureException {
+        return ExportType.getExporterByName(exportType);
     }
 }
