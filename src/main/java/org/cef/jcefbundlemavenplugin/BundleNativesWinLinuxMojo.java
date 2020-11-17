@@ -25,7 +25,7 @@ public class BundleNativesWinLinuxMojo extends BundleNativesMojo {
     /**
      * Relocations to perform (e.g. copy jar file to bundle, or copy resources).
      * Entries are described as relative paths from:to, delimited by ":".<br/>
-     * From path: Relative to your projects build directory (e.g. target/)
+     * From path: Relative to your projects build directory (e.g. target/)<br/>
      * To path: Relative to your bundle folder (e.g. target/jcef-bundle-X/)
      */
     @Parameter(required = true)
