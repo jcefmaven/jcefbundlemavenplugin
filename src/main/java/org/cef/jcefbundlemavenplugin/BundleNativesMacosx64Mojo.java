@@ -22,8 +22,7 @@ import java.nio.charset.StandardCharsets;
 @Mojo(name = "macosx64", defaultPhase = LifecyclePhase.PACKAGE)
 public class BundleNativesMacosx64Mojo extends BundleNativesMojo {
     /**
-     * The folder relative to the bundle folder, where the natives should reside.
-     * This has to be the same as the argument in the call to JCefLoader.installAndLoadCef(new File("cef_bundle"));
+     * The name of the application folder
      */
     @Parameter(defaultValue = "jcef_app.app")
     private String bundleName;
