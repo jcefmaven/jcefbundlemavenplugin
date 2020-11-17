@@ -15,8 +15,9 @@ import java.util.zip.ZipInputStream;
 public class FileUtil {
     /**
      * Unzips a file into another directory
+     *
      * @param file The file to unzip
-     * @param dir The target directory
+     * @param dir  The target directory
      * @throws IOException When a file operation can not be completed
      */
     public static void unzip(File file, File dir) throws IOException {
@@ -63,8 +64,9 @@ public class FileUtil {
 
     /**
      * Copies a directory or file to another directory or file
+     *
      * @param from The file or directory to copy
-     * @param to The destination
+     * @param to   The destination
      * @throws IOException When a file operation fails
      */
     public static void copyDir(File from, File to) throws IOException {
@@ -80,7 +82,7 @@ public class FileUtil {
                 if (!to.getParentFile().mkdirs()) {
                     throw new IOException("Failed to create dir " + to.getParentFile());
                 }
-            }else if(to.isDirectory()){
+            } else if (to.isDirectory()) {
                 to = new File(to, from.getName());
             }
             if (!to.createNewFile()) throw new IOException("Failed to create file " + to);

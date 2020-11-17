@@ -21,6 +21,7 @@ public enum NativeType {
     /**
      * Retrieves the platform dependent suffix for this native type.
      * This is used for building file paths.
+     *
      * @return nativeName
      */
     public String getNativeName() {

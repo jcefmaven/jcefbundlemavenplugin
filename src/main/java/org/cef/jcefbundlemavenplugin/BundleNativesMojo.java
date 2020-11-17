@@ -77,16 +77,18 @@ public abstract class BundleNativesMojo extends AbstractMojo {
     /**
      * This method generates a platform dependent bundle in "targetDir", using the natives provided in file "natives".
      * Implementations differ depending on the target platform.
-     * @param natives The native maven dependency file
+     *
+     * @param natives   The native maven dependency file
      * @param targetDir The directory to create the bundle in
-     * @throws IOException When a file operation failed
-     * @throws MojoFailureException When a configuration error is detected
+     * @throws IOException            When a file operation failed
+     * @throws MojoFailureException   When a configuration error is detected
      * @throws MojoExecutionException When an unforeseen exception occurs
      */
     public abstract void bundle(File natives, File targetDir) throws IOException, MojoFailureException, MojoExecutionException;
 
     /**
      * Generates a request used to fetch meta information on the target project.
+     *
      * @param project The target project
      * @return The request
      */
@@ -99,6 +101,7 @@ public abstract class BundleNativesMojo extends AbstractMojo {
 
     /**
      * Retrieves a list of dependencies without downloading them.
+     *
      * @param project The project to get the dependencies for
      * @return A list of all dependencies
      * @throws MojoExecutionException If the action can not be completed
@@ -124,6 +127,7 @@ public abstract class BundleNativesMojo extends AbstractMojo {
 
     /**
      * Locates the jcef-api artifact in a list of artifacts.
+     *
      * @param artifacts The list to search in
      * @return The jcef-api artifact, when present
      * @throws MojoFailureException If the artifact list did not contain jcef-api
@@ -139,6 +143,7 @@ public abstract class BundleNativesMojo extends AbstractMojo {
 
     /**
      * Determines the native version of a jcef artifact
+     *
      * @param artifact The jcef artifact
      * @return The native version
      */
@@ -148,9 +153,10 @@ public abstract class BundleNativesMojo extends AbstractMojo {
 
     /**
      * Resolves (downloads) a required artifact and returns the artifact's location on disk
-     * @param groupId The groupId of the required artifact
+     *
+     * @param groupId    The groupId of the required artifact
      * @param artifactId The artifactId of the required artifact
-     * @param version The version of the required artifact
+     * @param version    The version of the required artifact
      * @return Location on disk, where artifact is stored
      * @throws MojoExecutionException If the artifact could not be resolved
      */

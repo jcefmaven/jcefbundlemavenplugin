@@ -137,11 +137,12 @@ public class BundleNativesMacosx64Mojo extends BundleNativesMojo {
         //Relocate jar and resources
         Relocator.relocate(new File(getProjectBuildDir()), new File(newBundle, "Contents/Java"), relocations);
         //Run exporter
-        getExporter().export(targetDir, p->p.contains("MacOS")||p.endsWith("Chromium Embedded Framework"));
+        getExporter().export(targetDir, p -> p.contains("MacOS") || p.endsWith("Chromium Embedded Framework"));
     }
 
     /**
      * Converts an array of arguments to an xml string list for embedding in a .plist file
+     *
      * @param args The arguments to convert
      * @return The xml list
      */
