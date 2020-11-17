@@ -81,7 +81,7 @@ public class BundleNativesMacosx64Mojo extends BundleNativesMojo {
      * Entries are described as relative paths from:to, delimited by ":".<br/>
      * From path: Relative to your projects build directory (e.g. target/)<br/>
      * To path: Relative to your bundle folder, targeting the path for jar/class files
-     * (e.g. target/jcef_app.app/Contents/Java/)
+     * (e.g. target/jcef-bundle-macosx64/jcef_app.app/Contents/Java/)
      */
     @Parameter(required = true)
     private String[] relocations;
